@@ -1,24 +1,67 @@
-import React from "react";
+import Navbar from "./Navbar.js";
+import Jumbotron from "./jumbotron.js";
+import Card from "./card.js";
+import Footer from "./footer.js";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-export function Home() {
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+
+export default function Home () {
+
+
+    let cards = [
+
+{   
+    image: "https://via.placeholder.com/300", 
+    title: "My Card", 
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ", 
+    buttonText: "View", 
+    url: "#" 
 }
+
+{   
+    image: "https://via.placeholder.com/300", 
+    title: "My Card", 
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ", 
+    buttonText: "View", 
+    url: "#" 
+}
+{   
+    image: "https://via.placeholder.com/300", 
+    title: "My Card", 
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ", 
+    buttonText: "View", 
+    url: "#" 
+}
+{   
+    image: "https://via.placeholder.com/300", 
+    title: "My Card", 
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ", 
+    buttonText: "View", 
+    url: "#" 
+}
+{   
+    image: "https://via.placeholder.com/300", 
+    title: "My Card", 
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ", 
+    buttonText: "View", 
+    url: "#" 
+}
+
+
+
+    return (
+        <div className="container-fluid">
+        <Navbar />
+        <Jumbotron />
+        <div className="row">
+        {   card.map((card,index)) => 
+            <div className="col-3" key={index}>
+                <Card tittle={card.title} body={card.body} buttonText={card.buttonText} url={card.url}, image={card.image}
+}
+            </div>
+
+        }
+        </div>
+
+        </div>
+    )
