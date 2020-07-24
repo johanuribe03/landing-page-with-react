@@ -7,7 +7,9 @@ import React from "react";
 export function Footer() {
 	// const { title, body, buttonText, url, image } = props;
 	return (
-		
+		<footer className="container-fluid bg-dark text-white py-3 text-center">
+			Copyright &copy;2020 - Johan Uribe
+		</footer>
 	);
 }
 
