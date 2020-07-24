@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar } from "./navbar.js";
 // import { Jumbo } from "./jumbo.js";
 import { Card } from "./card.js";
-// import { Footer } from "./footer.js";
+import { Footer } from "./footer.js";
 
 export default function Home() {
 	let cards = [
@@ -66,7 +66,7 @@ export default function Home() {
 					</div>
 				))}
 			</div>
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 }
